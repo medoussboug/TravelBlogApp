@@ -18,6 +18,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:hint="@string/username"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             app:layout_constraintBottom_toTopOf="@+id/textPasswordInput"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +41,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
             android:hint="@string/password"
-
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             app:layout_constraintBottom_toTopOf="@+id/loginButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
