@@ -51,7 +51,16 @@ class LoginActivity : AppCompatActivity() {
             binding.textPasswordInput.error = "The password can't be empty"
         } else if (username != "admin" && password != "admin") {
             showErrorDialog()
+        } else {
+            performLogin()
         }
+    }
+
+    private fun performLogin() {
+        binding.loginButton.visibility = View.INVISIBLE
+        binding.progressBar.visibility = View.VISIBLE
+        binding.textUsernameLayout.isEnabled = false
+        binding.textPasswordInput.isEnabled = false
     }
 
     private fun showErrorDialog() {
