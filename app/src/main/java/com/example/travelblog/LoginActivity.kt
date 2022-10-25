@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
@@ -20,11 +21,11 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        if(preferences.isLoggedIn()) {
-//            startMainActivity()
-//            finish()
-//            return
-//        }
+        if(preferences.isLoggedIn()) {
+            startMainActivity()
+            finish()
+            return
+        }
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -71,7 +72,7 @@ class LoginActivity : AppCompatActivity() {
         binding.progressBar.visibility = View.VISIBLE
         binding.textUsernameLayout.isEnabled = false
         binding.textPasswordInput.isEnabled = false
-        Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
             startMainActivity()
             finish()
         }, 2000)
