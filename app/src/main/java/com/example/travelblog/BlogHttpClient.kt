@@ -12,6 +12,7 @@ object BlogHttpClient {
     const val PATH = "/raw/3eede691af3e8ff795bf6d31effb873d484877be"
 
     private const val BLOG_ARTICLES_URL = "$BASE_URL$PATH/blog_articles.json"
+
     private val executor = Executors.newFixedThreadPool(4)
     private val client = OkHttpClient()
     private val gson = Gson()
