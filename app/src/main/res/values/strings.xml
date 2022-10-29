@@ -3,4 +3,8 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="username">Username</string>
+    <string name="image_of_the_post">image of the post</string>
+    <string name="the_avatar_of_the_owner_of_the_post">The avatar of the owner of the post</string>
+    <string name="sort">Sort</string>
+    <string name="search">Search</string>
 </resources>
